@@ -89,7 +89,7 @@ escalation_rule$opt_action(current_dose, some_Ns, some_DLTs)
 ```
 
 If the returned action is `MTD_1`, …, `MTD_J`, or `no_MTD` (stop the
-trial ), it means the end of the trial.
+trial because of toxicity), it means the end of the trial.
 
 ## How to evaluate the escalation rule
 
@@ -171,7 +171,7 @@ my_scenarios <- list(
   prob = list(c(0.05, 0.11, 0.25, 0.31, 0.32, 0.40), 
               c(0.23, 0.27, 0.45, 0.47, 0.50, 0.57),
               c(0.38, 0.40, 0.43, 0.47, 0.51, 0.55)),
-  MTD = list(3L, c(1L, 2L), -1L),  # -1L means "no MTD"
+  MTD = list(3, c(1, 2), -1),  # -1 means "no MTD"
   weight = c(1, 2, 1)
 )
 
