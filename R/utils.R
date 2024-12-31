@@ -9,7 +9,7 @@ compute_state <- function(current_dose, J, data_Ns, data_DLTs, N_total) {
   stopifnot(length(data_Ns) == length(data_DLTs))
   stopifnot(all(data_Ns >= data_DLTs))
 
-  is_final <- ifelse(sum(data_Ns) == N_total, 0.2, 0.1)
+  is_final <- ifelse(sum(data_Ns) == N_total, 0.1, 0.0)
   
   state <- as.array(c(
     (current_dose - 1) / J,
