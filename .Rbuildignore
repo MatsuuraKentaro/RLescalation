@@ -1,0 +1,11 @@
+^RLescalation\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^\.gitignore$
+__pycache__
+^README\.Rmd$
+checkpoints
+escalation_rules
+^LICENSE\.md$
+^\.github$
+^data-raw$

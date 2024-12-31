@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+RLescalation.Rproj
+__pycache__
+checkpoints
+escalation_rules
+*.RDS

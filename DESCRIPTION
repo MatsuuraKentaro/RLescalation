@@ -1,0 +1,42 @@
+Package: RLescalation
+Type: Package
+Title: Optimal Dose Escalation Using Deep Reinforcement Learning
+Version: 1.0.0
+Authors@R: c(
+    person("Kentaro", "Matsuura", , "matsuurakentaro55@gmail.com", 
+           role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-5262-055X")))
+Description: An implementation to compute an optimal dose escalation rule
+    using deep reinforcement learning in phase I oncology trials
+    (Matsuura et al. (2023) <doi:10.1080/10543406.2023.2170402>).
+    The dose escalation rule can directly optimize the percentages of correct
+    selection (PCS) of MTDs.
+URL: https://github.com/MatsuuraKentaro/RLescalation
+BugReports: https://github.com/MatsuuraKentaro/RLescalation/issues
+VignetteBuilder: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    glue,
+    R6,
+    nleqslv,
+    reticulate,
+    stats,
+    utils
+Suggests:
+    knitr,
+    rmarkdown
+Collate:
+    'timer.R'
+    'train_algo.R'
+    'utils.R'
+    'escalation_rule.R'
+    'rl_dnn_config.R'
+    'rl_config_set.R'
+    'compute_rl_scenarios.R'
+    'learn_escalation_rule.R'
+    'setup_python.R'
+    'zzz.R'
+    'simulate_one_trial.R'
