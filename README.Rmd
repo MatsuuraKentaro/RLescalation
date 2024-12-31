@@ -134,7 +134,7 @@ head(d_sim, 13)
 #> 13          1     2        1    1 3   0          up
 ```
 
-The following code is an example of calculating PCS.
+The following code is an example of calculating the PCS.
 
 ```{r eval=FALSE}
 library(dplyr)
@@ -181,11 +181,17 @@ escalation_rule <- learn_escalation_rule(
 See the return of `compute_rl_scenarios()` for details.
 
 ## What to do if the learning is unstable
-Errors may occur during reinforcement learning. The obtained dose escalation rules may overfit some scenarios, so that the MTD cannot be estimated correctly at all in some other scenarios. In such cases, try the following.
+If an error occurs during reinforcement learning, please try the following.
+
+- Use `checkpoint` before the error (see below)
+- Change `seed` in `learn_escalation_rule()`
+- Try Linux or WSL instead of Windows because Ray on Windows is currently in beta
+- Reduce `sgd_minibatch_size` in `rl_config_set()` to `100L`
+
+The obtained dose escalation rules may overfit some scenarios, so that the MTD cannot be estimated correctly at all in some other scenarios. In such cases, please try the following.
 
 - Change `checkpoint` (see below)
 - Change `seed` in `learn_escalation_rule()`
-- Reduce `sgd_minibatch_size` in `rl_config_set()` to `100L`
 - Try custom scenarios
 
 ## How to use Escalation Rule Class
