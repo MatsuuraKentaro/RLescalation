@@ -94,7 +94,7 @@ escalation_rule$opt_action(current_dose, some_Ns, some_DLTs)
 If the returned action is `MTD_1`, ..., `MTD_J`, or `no_MTD` (stop the trial because of toxicity), it means the end of the trial.
 
 ## How to evaluate the escalation rule
-A convenient high-level function (`simulate_one_trial`) is provided to evaluate the obtained escalation rule. The following is an example of code to perform a simulation study similar to Sect. 3 in the original paper.
+A convenient high-level function (`simulate_one_trial`) is provided to evaluate the obtained escalation rule. The following is an example of code to perform a simulation study similar to Sect. 3 of the original paper.
 
 ```{r eval=FALSE}
 eval_scenarios <- list(
@@ -237,5 +237,5 @@ escalation_rule$resume_learning(iter = 100)
 Multiple checkpoints are created by `learn_escalation_rule` function. By default, the last checkpoint is used to build an escalation rule. If you want to build another escalation rule using another checkpoint, specify the directory name created by `learn_escalation_rule` function as follows.
 
 ```{r eval=FALSE}
-another_escalation_rule <- EscalationRule$new(dir = "checkpoints/20241231_130626_00900")
+another_escalation_rule <- EscalationRule$new(dir = "checkpoints/20250101_162633_00900")
 ```

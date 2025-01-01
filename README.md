@@ -95,7 +95,7 @@ trial because of toxicity), it means the end of the trial.
 
 A convenient high-level function (`simulate_one_trial`) is provided to
 evaluate the obtained escalation rule. The following is an example of
-code to perform a simulation study similar to Sect. 3 in the original
+code to perform a simulation study similar to Sect. 3 of the original
 paper.
 
 ``` r
@@ -261,5 +261,5 @@ the directory name created by `learn_escalation_rule` function as
 follows.
 
 ``` r
-another_escalation_rule <- EscalationRule$new(dir = "checkpoints/20241231_130626_00900")
+another_escalation_rule <- EscalationRule$new(dir = "checkpoints/20250101_162633_00900")
 ```
