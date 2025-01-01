@@ -71,8 +71,8 @@ escalation_rule <- learn_escalation_rule(
 
 escalation_rule
 #> <EscalationRule>
-#> dir: escalation_rules/20241231_130626
-#> created at: 2024-12-31 14:23:31
+#> dir: escalation_rules/20250101_162633
+#> created at: 2025-01-01 17:43:23
 #> call:
 #> learn_escalation_rule(J = 6, target = 0.25, epsilon = 0.04, delta = 0.1, 
 #>     N_total = 36, N_cohort = 3, seed = 123, rl_config = rl_config_set(iter = 1000))
@@ -145,12 +145,14 @@ library(dplyr)
 
 MTD_true <-  list("MTD_6", c("MTD_3", "MTD_4"), "no_MTD", "MTD_4")
 
-d_sim |> 
+d_res <- d_sim |> 
   filter(cohortID == max(cohortID), .by = c(scenarioID, simID)) |> 
   rowwise() |>
   mutate(correct = if_else(recommended %in% MTD_true[[scenarioID]], 1, 0)) |>
   ungroup() |> 
   summarise(PCS = mean(correct), .by = scenarioID)
+
+d_res
 #> # A tibble: 4 × 2
 #>   scenarioID   PCS
 #>        <int> <dbl>

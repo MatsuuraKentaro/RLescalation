@@ -9,7 +9,7 @@
 #' @param cores A positive integer value. Number of CPU cores used for learning.
 #' @param gamma A positive numeric value. Discount factor of the Markov decision
 #'        process. Default is 1.0 (not discount).
-#' @param lr A positive numeric value. Learning rate (default 3e-5). You can set
+#' @param lr A positive numeric value. Learning rate (default 5e-5). You can set
 #'        a learning schedule instead of a learning rate.
 #' @param train_batch_size A positive integer value. Training batch size.
 #'        Deprecated on the new API stack.
@@ -41,7 +41,7 @@ rl_config_set <- function(iter = 1000L,
                           save_every_iter = NULL,
                           cores = 4L,
                           # Common settings
-                          gamma = 1.0, lr = 3e-5,
+                          gamma = 1.0, lr = 5e-5,
                           train_batch_size = 10000L, model = rl_dnn_config(),
                           # PPO specific settings
                           sgd_minibatch_size = 200L, num_sgd_iter = 20L,

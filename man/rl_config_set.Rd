@@ -10,7 +10,7 @@ rl_config_set(
   save_every_iter = NULL,
   cores = 4L,
   gamma = 1,
-  lr = 3e-05,
+  lr = 5e-05,
   train_batch_size = 10000L,
   model = rl_dnn_config(),
   sgd_minibatch_size = 200L,
@@ -29,7 +29,7 @@ rl_config_set(
 \item{gamma}{A positive numeric value. Discount factor of the Markov decision
 process. Default is 1.0 (not discount).}
 
-\item{lr}{A positive numeric value. Learning rate (default 3e-5). You can set
+\item{lr}{A positive numeric value. Learning rate (default 5e-5). You can set
 a learning schedule instead of a learning rate.}
 
 \item{train_batch_size}{A positive integer value. Training batch size.
