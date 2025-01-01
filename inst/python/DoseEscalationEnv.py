@@ -83,7 +83,7 @@ class DoseEscalationEnv(gym.Env):
         Returns:
             The specific value of the state s.
         """
-        is_final = 0.1 if np.sum(self.Ns) == self.N_total else 0.0
+        is_final = 1.0 if np.sum(self.Ns) == self.N_total else 0.0
         
         return np.concatenate((
             np.array([self.current_dose / (self.J - 1)]),
