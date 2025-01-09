@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The purpose of this `RLescalation` package is to easily construct an dose escalation rule that directly optimizes the percentages of correct selection (PCS) of MTDs. Several high-level functions are also provided to make it easy to perform simulation studies.
+The purpose of this `RLescalation` package is to easily construct an dose escalation rule that directly optimizes the percentages of correct selection (PCS) of the maximum tolerated dose (MTD). Several high-level functions are also provided to make it easy to perform simulation studies.
 
 ## Installation
 
