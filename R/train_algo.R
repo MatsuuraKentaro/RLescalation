@@ -38,7 +38,7 @@ train_algo <- function(algo, n_start, N_update,
     elapsed_time <- timer$elapsed()
     estimated_remaining <- timer$estimate_remaining(N_update - n)
 
-    print(glue("{formatC(n, digits)}: Min/Mean/Max return: {returns$min}/{returns$mean}/{returns$max} ({round(elapsed_time)} secs, remaining: {estimated_remaining})"))
+    message(glue("{formatC(n, digits)}: Min/Mean/Max return: {returns$min}/{returns$mean}/{returns$max} ({round(elapsed_time)} secs, remaining: {estimated_remaining})"))
   }
 
   dir_path <- glue("{output_checkpoint_path}_{formatC(n, digits, flag = '0')}")

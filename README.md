@@ -141,7 +141,7 @@ The following code is an example of calculating the PCS.
 ``` r
 library(dplyr)
 
-MTD_true <-  list("MTD_6", c("MTD_3", "MTD_4"), "no_MTD", "MTD_4")
+MTD_true <- list("MTD_6", c("MTD_3", "MTD_4"), "no_MTD", "MTD_4")
 
 d_res <- d_sim |> 
   filter(cohortID == max(cohortID), .by = c(scenarioID, simID)) |> 
