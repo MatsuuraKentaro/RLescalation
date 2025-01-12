@@ -4,7 +4,7 @@
 \alias{compute_rl_scenarios}
 \title{Compute DLT Probability Scenarios for Reinforcement Learning}
 \usage{
-compute_rl_scenarios(J, target, epsilon, delta)
+compute_rl_scenarios(J, target, epsilon, delta, lower = 0.1, upper = 0.8)
 }
 \arguments{
 \item{J}{A positive integer value. The number of doses.}
@@ -17,6 +17,12 @@ probabilities is defined as [\code{target} - \code{epsilon}, \code{target} + \co
 \item{delta}{A positive numeric value. The unacceptable ranges of target DLT
 probabilities are defined as [0, \code{target} - \code{delta}] and
 [\code{target} + \code{delta}, 1].}
+
+\item{lower}{A positive numeric value. Values lower than \code{lower} are clipped.
+Default is 0.1, which is modified from Sect. 2.2 of the original paper.}
+
+\item{upper}{A positive numeric value. Values higher than \code{upper} are clipped.
+Default is 0.8.}
 }
 \value{
 A named list of three elements:
