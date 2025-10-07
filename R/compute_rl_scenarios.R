@@ -24,6 +24,7 @@
 #' print(scenarios)
 #'
 #' @importFrom stats plogis
+#' @importFrom nleqslv nleqslv
 #'
 #' @export
 compute_rl_scenarios <- function(J, target, epsilon, delta, lower = 0.1, upper = 0.8) {

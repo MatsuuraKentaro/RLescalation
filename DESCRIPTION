@@ -1,7 +1,7 @@
 Package: RLescalation
 Type: Package
 Title: Optimal Dose Escalation Using Deep Reinforcement Learning
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
     person("Kentaro", "Matsuura", , "matsuurakentaro55@gmail.com", 
            role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-5262-055X")))
@@ -24,7 +24,8 @@ Imports:
     nleqslv,
     reticulate,
     stats,
-    utils
+    utils,
+    zip
 Suggests:
     knitr,
     rmarkdown
